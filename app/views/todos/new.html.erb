@@ -1,0 +1,23 @@
+<h1>Add New To-do Item</h1>
+
+<%= render 'layouts/navbar' %>
+  <%= yield %>
+
+<%= form_for @todo do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <%= f.label :importance %>
+  <%= f.text_field :importance %>
+  <br>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <br>
+  <%= f.submit %>
+
+<% end %>
+
+<%= link_to 'Back', todos_path %>

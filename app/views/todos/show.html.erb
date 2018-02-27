@@ -1,0 +1,12 @@
+<%= render 'layouts/navbar' %>
+  <%= yield %>
+
+<h1><%= @todo.title %></h1>
+
+<h4>Description:<br><%= @todo.description %></h4>
+
+<h4>Importance: (1, 2 or 3)<br><%= @todo.importance %></h4>
+
+<p>Completed</p><h4><%= @todo.completed %></h4>
+
+<%= link_to 'Back', todos_path %>
